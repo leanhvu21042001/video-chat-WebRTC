@@ -7,7 +7,6 @@ const io = require("socket.io")(server, {
     origin: "https://web-rtc-video-chat-client.vercel.app",
     methods: ["GET", "POST"],
   },
-  credentials: true,
 });
 
 app.use(cors());

@@ -7,9 +7,7 @@ import { BASE_SERVER_URL } from "./constants";
 
 const SocketContext = React.createContext();
 
-const socket = io(BASE_SERVER_URL, {
-  withCredentials: true,
-});
+const socket = io(BASE_SERVER_URL);
 
 const ContextProvider = ({ children }) => {
   const [stream, setStream] = React.useState(null);
