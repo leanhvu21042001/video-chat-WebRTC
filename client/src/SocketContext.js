@@ -3,9 +3,11 @@ import React from "react";
 import { io } from "socket.io-client";
 import Peer from "simple-peer";
 
+import { BASE_SERVER_URL } from "./constants";
+
 const SocketContext = React.createContext();
 
-const socket = io("http://localhost:5000");
+const socket = io(BASE_SERVER_URL);
 
 const ContextProvider = ({ children }) => {
   const [stream, setStream] = React.useState(null);
