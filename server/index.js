@@ -4,12 +4,20 @@ const cors = require("cors");
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: ["https://web-rtc-video-chat-client.vercel.app/"],
+    origin: ["https://web-rtc-video-chat-client.vercel.app"],
     methods: ["GET", "POST"],
   },
 });
 
 app.use(cors());
+
+// Magic Lines
+server.prependListener("request", (_req, res) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://web-rtc-video-chat-client.vercel.app"
+  );
+});
 
 app.get("/", (req, res) => {
   return res.send("Server is running");
