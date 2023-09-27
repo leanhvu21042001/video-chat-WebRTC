@@ -30,6 +30,10 @@ const VideoPlayer = () => {
     React.useContext(SocketContext);
   const classes = useStyles();
 
+  console.log({
+    stream,
+    myVideo,
+  });
   return (
     <Grid container className={classes.gridContainer}>
       {/* Our own video */}
