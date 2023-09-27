@@ -30,10 +30,6 @@ const VideoPlayer = () => {
     React.useContext(SocketContext);
   const classes = useStyles();
 
-  console.log({
-    stream,
-    myVideo,
-  });
   return (
     <Grid container className={classes.gridContainer}>
       {/* Our own video */}
@@ -45,7 +41,6 @@ const VideoPlayer = () => {
             </Typography>
             <video
               playsInline
-              muted
               ref={myVideo}
               autoPlay
               className={classes.video}
@@ -63,7 +58,6 @@ const VideoPlayer = () => {
             </Typography>
             <video
               playsInline
-              muted
               ref={userVideo}
               autoPlay
               className={classes.video}
