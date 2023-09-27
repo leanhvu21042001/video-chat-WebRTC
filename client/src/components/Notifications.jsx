@@ -9,7 +9,7 @@ const Notifications = () => {
 
   return (
     <React.Fragment>
-      {call.isReceivedCall && !callAccepted && (
+      {call.isReceivingCall && !callAccepted && (
         <div style={{ display: "flex", justifyContent: "center" }}>
           <h1>{call.name} is calling: </h1>
 
